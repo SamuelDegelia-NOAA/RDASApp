@@ -1,5 +1,5 @@
      - obs space:
-         name: aircft
+         name: aircft_t_134
          distribution:
            name: "@DISTRIBUTION@"
            halo size: 100e3
