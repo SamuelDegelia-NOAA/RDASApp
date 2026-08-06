@@ -45,7 +45,7 @@
 	ignore = all
 [submodule "sorc/oops"]
 	path = sorc/oops
-	url = https://github.com/jcsda/oops
+	url = https://github.com/jcsda-internal/oops
 	branch = develop
 	ignore = all
 [submodule "sorc/saber"]
