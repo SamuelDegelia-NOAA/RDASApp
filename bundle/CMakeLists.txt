@@ -83,6 +83,15 @@ if(BUILD_RDASBUNDLE)
   ecbuild_bundle( PROJECT saber SOURCE "../sorc/saber" )
   option(ENABLE_IODA_DATA "Obtain ioda test data from ioda-data repository (vs tarball)" ON)
   ecbuild_bundle( PROJECT ioda SOURCE "../sorc/ioda" )
+
+# ROPP (GNSSRO bending angle ROPP operators in ufo). Not the official
+# jcsda-internal/ropp-ufo repo -- a locally-built CMake wrapper around a
+# subset of the upstream ROM SAF ROPP source. See sorc/ropp/CMakeLists.txt.
+  option(BUILD_ROPP "Build ROPP" OFF)
+  if(BUILD_ROPP)
+    ecbuild_bundle( PROJECT ropp-ufo SOURCE "../sorc/ropp" )
+  endif()
+
   option(ENABLE_UFO_DATA "Obtain ufo test data from ufo-data repository (vs tarball)" ON)
   ecbuild_bundle( PROJECT ufo SOURCE "../sorc/ufo" )
 
