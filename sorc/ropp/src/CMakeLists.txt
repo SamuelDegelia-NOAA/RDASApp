@@ -231,9 +231,11 @@ list( APPEND ropp_fm_src_files
   ropp_fm/bangle_1d/ropp_fm_abel.f90
   ropp_fm/bangle_1d/ropp_fm_abel_ad.f90
   ropp_fm/bangle_1d/ropp_fm_abel_tl.f90
+  # ropp_fm_bangle_1d_grad.f90 is intentionally excluded: it's a Jacobian
+  # routine used only by ROPP's own 1DVar tooling (not called by UFO), and it
+  # pulls in model_ecmwf/model_meto (which we don't otherwise need).
   ropp_fm/bangle_1d/ropp_fm_bangle_1d.f90
   ropp_fm/bangle_1d/ropp_fm_bangle_1d_ad.f90
-  ropp_fm/bangle_1d/ropp_fm_bangle_1d_grad.f90
   ropp_fm/bangle_1d/ropp_fm_bangle_1d_tl.f90
 
   ropp_fm/bangle_2d/ropp_fm_2d_plane.f90
@@ -250,9 +252,10 @@ list( APPEND ropp_fm_src_files
   ropp_fm/bangle_2d/ropp_fm_gpspderivs_ad.f90
   ropp_fm/bangle_2d/ropp_fm_gpspderivs_tl.f90
 
+  # ropp_fm_refrac_1d_grad.f90 excluded for the same reason as
+  # ropp_fm_bangle_1d_grad.f90 above.
   ropp_fm/refrac_1d/ropp_fm_refrac_1d.f90
   ropp_fm/refrac_1d/ropp_fm_refrac_1d_ad.f90
-  ropp_fm/refrac_1d/ropp_fm_refrac_1d_grad.f90
   ropp_fm/refrac_1d/ropp_fm_refrac_1d_new.f90
   ropp_fm/refrac_1d/ropp_fm_refrac_1d_new_ad.f90
   ropp_fm/refrac_1d/ropp_fm_refrac_1d_new_tl.f90
